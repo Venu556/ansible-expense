@@ -1,0 +1,8 @@
+- name: mysql configuration
+  hosts: mysql
+  become: yes
+  tasks:
+  - name: install MySQL server
+    ansible.built.pacakge:
+      name: mysql-server
+      state: present
